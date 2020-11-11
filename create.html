@@ -46,7 +46,7 @@
         </p>
         <p>
           <label>Delivery Instruction:</label>
-          <textarea rows="4" cols="55">Gate code is 1234</textarea>
+            <textarea rows="4" cols="55" style="resize:none">Gate code is 1234</textarea>
         </p>
       </fieldset>
     </form>
@@ -83,10 +83,10 @@
     var form = document.getElementById("myForm");
     var input = document.createElement("input");
     var input2 = document.createElement("input");
-    input.type = "text";
-    input.value = "Hemly Fuji Apple";
-    input2.type = "text";
-    input2.value ="2"
+    input.setAttribute("type", "text");
+    input.setAttribute("placeholder", "Item name");
+    input2.setAttribute("type", "text");
+    input2.setAttribute("placeholder", "Quantity");
     var br = document.createElement("br");
     form.appendChild(input);
     form.appendChild(input2);
