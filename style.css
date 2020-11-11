@@ -3,7 +3,9 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
+label textarea{
+  vertical-align: top;
+}
 td, th {
   border: 1px solid #dddddd;
   text-align: center;
