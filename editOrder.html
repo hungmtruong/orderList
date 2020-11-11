@@ -48,9 +48,7 @@
         </p>
         <p>
           <label>Delivery Instruction:</label>
-          <input type = "text"
-                  id = "deliveryNote"
-                  value = "Gate code is 1234" />
+          <textarea rows="4" cols="55">Gate code is 1234</textarea>
         </p>
       </fieldset>
     </form>
@@ -77,7 +75,7 @@
                 id = "item1qt"
                 value = "2" />
        </p>
-       <button style="button">Add more item</button>
+       <button style="button" onclick="addMore()">Add more item</button>
 
      </fieldset>
    </form>
@@ -89,4 +87,5 @@
       </center>
      </p>
   </body>
+  <script src="script.js"></script>
 </html>

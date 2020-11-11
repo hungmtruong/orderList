@@ -50,33 +50,27 @@
         </p>
       </fieldset>
     </form>
-    <form>
+
      <fieldset>
        <legend>Order Information</legend>
-       <p>
-         <label>Item name:</label>
-         <input type = "text"
-                id = "item1"
-                value = "Moroccan Pumpkin Stew" />
-         <label>Quantity</label>
-         <input type = "text"
-                id = "item1qt"
-                value = "2" />
-       </p>
-       <p>
-         <label>Item name:</label>
-         <input type = "text"
-                id = "item2"
-                value = "Japanese Curry & Veggies" />
-         <label>Quantity</label>
-         <input type = "text"
-                id = "item1qt"
-                value = "2" />
-       </p>
-       <button style="button">Add more item</button>
+       <form name="myForm" id="myForm" onsubmit="return validateForm()">
+          Item: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY<br />
+          <input type="text" id="items" value="Moroccan Pumpkin Stew" />
+          <input type="text" id="qty" value="2" />
+          <input type="button" id="addMore" value="Add More Item" /><br />
+          <input type="text" id="items" value="Japanese Curry & Veggies" />
+          <input type="text" id="qty" value="2" />
+
+      <br/>
+      </form>
 
      </fieldset>
-   </form>
+   
    <p>
       <center>
         <button style="button"><a href="newOrderList.html">Submit</button>
@@ -85,4 +79,14 @@
       </center>
      </p>
   </body>
+  <script>document.getElementById("addMore").onclick = function() {
+    var form = document.getElementById("myForm");
+    var input = document.createElement("input");
+    var input2 = document.createElement("input");
+    input.type = "text";
+    var br = document.createElement("br");
+    form.appendChild(input);
+    form.appendChild(input2);
+    form.appendChild(br);
+}</script>
 </html>
