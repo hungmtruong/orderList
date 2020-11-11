@@ -52,33 +52,25 @@
         </p>
       </fieldset>
     </form>
-    <form>
-     <fieldset>
-       <legend>Order Information</legend>
-       <p>
-         <label>Item name:</label>
-         <input type = "text"
-                id = "item1"
-                value = "Fairytale" />
-         <label>Quantity</label>
-         <input type = "text"
-                id = "item1qt"
-                value = "2" />
-       </p>
-       <p>
-         <label>Item name:</label>
-         <input type = "text"
-                id = "item2"
-                value = "Hemly Pink Lady" />
-         <label>Quantity</label>
-         <input type = "text"
-                id = "item1qt"
-                value = "2" />
-       </p>
-       <button style="button" onclick="addMore()">Add more item</button>
+    <fieldset>
+      <legend>Order Information</legend>
+      <form name="myForm" id="myForm" onsubmit="return validateForm()">
+         Item: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY<br />
+         <input type="text" id="items" value="Fairytale" />
+         <input type="text" id="qty" value="2" />
+         <input type="button" id="addMore" value="Add More Item" /><br />
+         <input type="text" id="items" value="Hemly Pink Lady" />
+         <input type="text" id="qty" value="2" />
 
-     </fieldset>
-   </form>
+     <br/>
+     </form>
+
+    </fieldset>
    <p>
       <center>
         <button style="button"><a href="newOrderList.html">Submit</button>
@@ -87,5 +79,17 @@
       </center>
      </p>
   </body>
-  <script src="script.js"></script>
+  <script>document.getElementById("addMore").onclick = function() {
+    var form = document.getElementById("myForm");
+    var input = document.createElement("input");
+    var input2 = document.createElement("input");
+    input.type = "text";
+    input.value = "Hemly Fuji Apple";
+    input2.type = "text";
+    input2.value ="2"
+    var br = document.createElement("br");
+    form.appendChild(input);
+    form.appendChild(input2);
+    form.appendChild(br);
+}</script>
 </html>
